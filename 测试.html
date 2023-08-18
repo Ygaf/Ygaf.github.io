@@ -1,0 +1,1303 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pioneer recruit</title>
+    
+    
+    <script>
+        window.onload = function(){
+            var prev = document.getElementById("prev");
+            var next = document.getElementById("next");
+            var lunbo = document.getElementById("lunbo")[0];
+            var imgArr=["url(banner.png.png)","url(1646405140087.jpg.png)","url(1646405249621.jpg.png)","url(1646405140123.jpg.png)","url(未标题-1.png.png)","url(轮播图图1.png)"];
+            var index=0;
+            var info = document.getElementById("info");
+            info.innerHTML = index+1;
+            prev.onclick = function(){
+                index--;
+                if(index<0){
+                    index = imgArr.length-1;
+                }
+                document.getElementById('lunbo').style.backgroundImage = imgArr[index];
+                var info = document.getElementById("info");
+                info.innerHTML = index+1;
+            };
+            next.onclick = function(){
+                index++;
+                if(index > imgArr.length-1){
+                    index = 0;
+                }
+                document.getElementById('lunbo').style.backgroundImage = imgArr[index];
+                var info = document.getElementById("info");
+                info.innerHTML = index+1;
+            };
+            
+        }
+    </script>
+</head>
+<style>
+  
+*{
+    margin: 0;
+    padding: 0;           
+}
+body{
+    min-width: 1200px;
+}
+a{
+    text-decoration: none;
+}
+nav a:hover{
+    color: red;
+}
+.head{
+    background-image: url(../banner.png.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    height: 360px;
+    width: 1200px;
+    position: relative;
+}
+#info{
+    background-image: url(../矩形\ 234.png);
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    top: 320px;
+    font-size: 20px;
+    color: #000;
+    border-radius: 50%;
+}
+#prev{            
+    float: left;
+    margin-top: 150px;
+    height: 60px;
+    width: 45px;
+}
+#next{
+    float: right;
+    margin-top: 150px;
+    height: 60px;
+    width: 45px;
+}
+header{
+    width: 100%;
+    background-color: rgba(243, 248, 253, 1);
+    height: 360px;
+}
+.content{
+    background-color: rgba(243, 248, 253, 1);
+    width: 1200px;
+    height: 6350px;
+}
+section{
+    background-color: rgba(243, 248, 253, 1);
+    width: 100%;
+    height: 6350px;
+}
+nav{
+    background-image: url(../页眉BG.png);
+    background-repeat: no-repeat;
+    background-size: 1200px 74px;
+    height: 74px;
+    width: 1200px;
+    text-align: center;
+    line-height: 74px;
+    position: absolute;
+    z-index: 9999;
+}
+nav ul{
+    margin-left: 210px;
+}
+nav li{
+    list-style-type: none;            
+    height: 74px;
+    width: 80px;
+    float: left;
+    line-height: 74px;
+    font-size: 15px;
+    
+}
+.bottom-mengban{
+    background-image: url(../白色长条蒙版.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 150px;
+    width: 1200px;
+    position: absolute;
+    top: 210px;
+    left: 0;
+}
+.logo{
+    height: 74px;
+    width: 90px;
+    line-height: 20px;
+    padding-top: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.logo img{
+    border-style: solid;
+    border-width: 2px;
+    border-color: rgb(214, 211, 211);
+    border-radius: 10px;
+}
+.logo h1{
+    letter-spacing: 2px;
+    font-size: 15px;
+    color: transparent;   
+    position: relative;
+    background: linear-gradient(to right,#fff,#000,#fff);
+    /* #ff59b3,#fe0000,#ffff01,#40e1d2,#410098,#9400d4 */
+    background-clip: text;
+    -webkit-background-clip: text; 
+    background-position: center;   
+    background-size: 80%;
+    animation: move 6s linear infinite;
+}
+@keyframes move{
+    0%{
+        background-position: -500%;
+    }
+    100%{
+        background-position: 500%;
+    }
+}
+nav a{
+    color: rgba(96, 98, 102, 1);
+    font-size: 15px;
+}
+.search{
+    height: 18px;
+    width: 130px;            
+    background: url(../查找.png) no-repeat scroll right center transparent;
+    background-position-x: 110px;             
+    border-radius: 15px;
+    margin-left: -190px; 
+    background-color: rgba(255, 255, 255, 1);
+    border: 1px solid rgba(220, 223, 231, 1);  
+    outline: none;   
+      
+}
+.dazi{
+    width: 285px;
+    height: 333px;
+    margin-left: 35px;
+    margin-top: 40px;
+    position: absolute;
+}
+.jianjie{
+    width: 926px;
+    height: 32px;
+    background-color: rgba(168, 3, 45, 1);
+    margin: 0 auto;
+    line-height: 32px;
+    color: rgba(255, 255, 255, 1);
+    font-size: 15px;
+    position: relative;
+}
+.jianjie p{
+    display: inline-block;
+    position: absolute;
+    left: 15px;
+}
+.jianjie a{
+    display: inline-block;
+    position: absolute;
+    height: 32px;
+    line-height: 32px;
+    width: 40px;
+    left: 870px;
+    text-align: center;
+    color: rgba(255, 255, 255, 1);
+    font-size: 20px;                        
+}
+.jianjie a :hover{
+    color: black;
+}
+nav.sticky{
+    position: fixed;
+    top: 0;
+    left: auto;
+}
+.jjcontent{
+    width: 926px;
+    height: 250px;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+}
+.passpage1{
+    margin-left: 20px;
+    margin-top: 12px;
+    width: 500px;
+    height: 260px;
+    line-height: 30px;
+    float: left;
+    position: relative;
+}
+.passpage1 p{
+    color: rgba(112, 112, 112, 1);
+    font-size: 18px;
+    text-align: left;
+}
+.passpage1 h5{
+    color: rgba(200, 20, 40, 1);
+    font-size: 25px;
+    display: block;
+    text-align: left;
+}
+.jjtu{
+    width: 300px;
+    height: 200px;
+    float: right;
+    margin-top: 25px;
+    margin-right: 50px;
+}
+.passpage1 a{
+    display: block;
+    height: 60px;
+    width: 200px;
+    left: 300px;
+    top: 150px;
+    position: absolute;
+}
+.passpage1 a :hover{
+    box-shadow: 0 0 2px 2px #000;
+    box-sizing: border-box;
+}
+.rizhi{
+    width: 926px;
+    height: 32px;
+    background-color: rgba(168, 3, 45, 1);
+    margin: 0 auto;
+    line-height: 32px;
+    color: rgba(255, 255, 255, 1);
+    font-size: 15px;
+    position: relative;
+    margin-top: 25px;
+}
+.rizhi p{
+    display: inline-block;
+    position: absolute;
+    left: 15px;
+}
+.rizhi a{
+    display: inline-block;
+    position: absolute;
+    height: 32px;
+    line-height: 32px;
+    width: 40px;
+    left: 870px;
+    text-align: center;
+    color: rgba(255, 255, 255, 1);
+    font-size: 20px;                        
+}
+.rizhi a:hover{
+    color: black;
+}
+.rzcontent{
+    width: 926px;
+    height: 400px;
+    background: rgba(250, 250, 253, 1);
+    box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+    margin: 0 auto;
+    position: relative;
+    text-align: left;
+}
+.rzcontent ul{
+    height: 327px;
+    width: 926px;
+    position: absolute;
+    left: 30px;
+    top: 24px;
+    
+}
+.rzcontent ul li{
+    list-style-type: none;
+    width: 260px;
+    height: 327px;
+    float: left;
+    background-color: rgba(255, 255, 255, 1);
+}
+.tb2 , .tb3{
+    margin-left: 40px;
+}
+.tbtop{            
+    height: 50px;
+    width: 250px;
+    line-height: 50px;
+}
+.tbtop p{
+    color: rgba(160, 6, 45, 1);
+    font-size: 20px;
+    display: block;
+    margin-left: 15px;
+    font-weight: bold;
+}
+.tb1{
+    position: relative;
+    margin-left: 10px;
+}
+.tb1 img{
+    margin-top: 12px;
+    margin-left: 15px;
+}
+.liebiao{
+    height: 261px;
+    width: 200px;
+    float: right;
+    margin-right: 15px;
+}
+.liebiao a{
+    color: rgba(112, 112, 112, 1);
+    font-size: 15px;
+    line-height: 35px;
+}
+.liebiao a:hover{
+    color: red;
+    text-decoration: underline;
+}
+.tb2 img{
+    margin-top: 12px;
+    margin-left: 15px;
+}
+.tb3 img{
+    margin-top: 12px;
+    margin-left: 15px;
+}
+.introduce{
+    width: 1200px;
+    height: 250px;
+    background-image: url(../矩形\ \(1\).png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    margin-top: 25px;
+    color: rgba(255, 255, 255, 1);
+    letter-spacing: 4.8px;
+    font-size: 50px;
+    line-height: 60px;
+    text-align: center;
+}
+.introcontent{
+    width: 926px;
+    height: 800px;
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow: 0px 2px 5px rgba(128, 126, 126, 0.5);
+    margin: 0 auto;
+    margin-top: 20px;
+}
+.introcontent ul li{
+    list-style-type: none;
+    float: left;
+}
+.introt1,.introt2,.introt3,.introt4{
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    width: 180px;
+    height: 330px;
+    margin-top: 35px;
+    text-align: center;
+}
+.introt1 p,.introt2 p,.introt3 p,.introt4 p{
+    width: 100px;
+    height: 45px;
+    text-shadow: 3px 3px #000;
+    box-shadow: 0 2px 3px #000;
+    color: rgba(255, 255, 255, 1);
+    letter-spacing: 2px;
+    font-size: 25px;
+    display: block;
+    margin-top: 120px;
+    margin-left: 40px;
+}
+.introt1{
+    margin-left: 41px;
+    background-image: url(../技术图.png);            
+}
+.introt2,.introt3,.introt4{
+    margin-left: 41px;
+}
+.introt2{
+    background-image: url(../美工图.png);
+}
+.introt3{
+    background-image: url(../宣策图.png);
+}
+.introt4{
+    background-image: url(../舆情图.png);
+}
+.introb1,.introb2,.introb3,.introb4{
+    width: 180px;
+    height: 400px;
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, .5);
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.introb1{
+    margin-left: 41px;
+    background-image: url(../矢量智能对象.png.png);
+    background-size: 150px 150px;
+}
+.introb2{
+    background-image: url(../笔.png.png);
+}
+.introb3{
+    background-image: url(../羽毛.png.png);
+}
+.introb4{
+    background-image: url(../话筒.png.png);
+}
+.introb2,.introb3,.introb4{
+    margin-left: 41px;
+    background-size: 150px 150px;
+}
+.introb1 p,.introb2 p,.introb3 p,.introb4 p{
+    width: 180px;
+    height: 400px;
+    color: rgba(0, 0, 0, 1);
+    font-size: 15px;
+    line-height: 25px;
+    display: block;
+    margin-left: 1px;
+    margin-top: 25px;
+}
+.fruit{
+    margin-top: 30px;
+    background-image: url(../矩形\ \(2\).png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    height: 250px;
+    width: 1200px;
+    text-align: center;
+    color: rgba(255, 255, 255, 1);
+    letter-spacing: 4.8px;
+    font-size: 50px;
+    line-height: 60px;
+}
+.fruitcontent{
+    width: 926px;
+    height: 1850px;
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    margin: 0 auto;
+    margin-top: 30px;
+    position: relative;
+}
+.fym1{
+    width: 605px;
+    height: 32px;
+    background-color: rgba(168, 3, 45, 1);
+    color: rgba(255, 255, 255, 1);
+    font-size: 15px;
+    line-height: 32px;
+    left: 40px;
+    top: 25px;
+    position: absolute;
+}
+.fym1 a{
+    display: block;
+    width: 16.43px;
+    height: 16px;
+    line-height: 16px;
+    margin-right: 15px;
+    float: right;
+    margin-top: 8px;
+    color: rgba(255, 255, 255, 1);            
+}
+.fym1 p{
+    display: inline-block;
+    position: absolute;
+    left: 15px;
+}
+.fym1 a:hover{
+    color: black;
+}
+.fym1c{
+    width: 605px;
+    height: 342px;
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, .5);
+    position: absolute;
+    left: 40px;
+    top: 57px;
+}
+.fym1c img{
+    display: block;
+    float: left;
+    margin-left: 40px;
+    margin-top: 20px;
+}
+.fym1cright{
+    width: 468px;
+    height: 329px;
+    left: 590px;
+    top: 10px;
+    background-image: url(../图层\ 10.png.png);
+    background-size: contain;
+    position: absolute;
+}
+.shubiao{
+    width: 138px;
+    height: 121px;
+    position: absolute;
+    top: 300px;
+    left: 610px;
+    background-image: url(../标题BG.png),url(../矢量智能对象.png.png);
+    background-repeat: no-repeat;           
+    background-size: contain;
+    background-position-x: center;
+}
+.tuceng4{
+    width: 474px;
+    height: 700px;
+    position: absolute;
+    left: -270px;
+    top: 590px;
+    background-image: url(../图层\ 4.png.png);
+    background-size: contain;
+}
+.tuceng41{
+    width: 988px;
+    height: 952px;
+    position: absolute;
+    top: 500px;
+    left: 0;
+    background-image: url(../图层\ 41.png.png);
+    background-size: contain;
+}
+.fym2{
+    width: 657px;
+    height: 32px;
+    background-color: rgba(168, 3, 45, 1);
+    color: rgba(255, 255, 255, 1);
+    font-size: 15px;
+    line-height: 32px;
+    left: 190px;
+    top: 430px;
+    position: absolute;
+}
+.fym2 p{
+    display: inline-block;
+    position: absolute;
+    left: 15px;
+}
+.fym2 a{
+    display: block;
+    width: 16.43px;
+    height: 16px;
+    line-height: 16px;
+    margin-right: 15px;
+    float: right;
+    margin-top: 8px;
+    color: rgba(255, 255, 255, 1);            
+}
+.fym2 a:hover{
+    color: black;
+}
+.fym2c{
+    width: 657px;
+    height: 436px;
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, .5);
+    position: absolute;
+    left: 190px;
+    top: 462px;
+}
+.fym2c li{
+    list-style-type: none;
+    width: 278px;
+    height: 114px;
+    float: left;
+}
+.c2t1{
+    margin-left: 48px;
+    margin-top: 35px;
+}
+.c2t2{
+    margin-left: 12px;
+    margin-top: 35px;
+}
+.c2t3{
+    margin-left: 48px;
+    margin-top: 12px;
+}
+.c2t4{
+    margin-left: 12px;
+    margin-top: 12px;
+}
+.c2t5{
+    margin-left: 48px;
+    margin-top: 12px;
+}
+.c2t6{
+    margin-left: 12px;
+    margin-top: 12px;
+}
+.t3{
+    width: 757px;
+    height: 734px;
+    position: absolute;
+    top: 1071px;
+    left: -172px;
+    background-image: url(../3.png.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.t31{
+    width: 330px;
+    height: 527px;
+    background-image: url(../3.png\ \(1\).png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 1357px;
+    left: 329px;
+}
+.fym3{
+    width: 600px;
+    height: 32px;
+    background-color: rgba(168, 3, 45, 1);  
+    color: rgba(255, 255, 255, 1);
+    font-size: 15px;
+    line-height: 32px;
+    left: 34px;
+    top: 918px;
+    position: absolute;
+}
+.fym3 a{
+    display: block;
+    width: 16.43px;
+    height: 16px;
+    line-height: 16px;
+    margin-right: 20px;
+    float: right;
+    margin-top: 8px;
+    color: rgba(255, 255, 255, 1);            
+}
+.fym3 p{
+    display: inline-block;
+    position: absolute;
+    left: 15px;
+}
+.fym3 a:hover{
+    color: black;
+}
+.fym3c{
+    width: 600px;
+    height: 333px;
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, .5);
+    position: absolute;
+    left: 34px;
+    top: 950px;
+}
+.fym3c img{
+    margin-left: 49px;
+    margin-top: 15px;
+    display: block;
+    float: left;
+}
+.fym4{
+    width: 600px;
+    height: 32px;
+    background-color: rgba(168, 3, 45, 1);  
+    color: rgba(255, 255, 255, 1);
+    font-size: 15px;
+    line-height: 32px;
+    left: 247px;
+    top: 1315px;
+    position: absolute;
+}
+.fym4 p{
+    display: inline-block;
+    position: absolute;
+    left: 15px;
+}
+.fym4 a{
+    display: block;
+    width: 16.43px;
+    height: 16px;
+    line-height: 16px;
+    margin-right: 20px;
+    float: right;
+    margin-top: 8px;
+    color: rgba(255, 255, 255, 1);            
+}
+.fym4 a:hover{
+    color: black;
+}
+.fym4c{
+    width: 600px;
+    height: 432px;
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, .5);
+    position: absolute;
+    left: 247px;
+    top: 1347px;
+}
+.fym4c li{
+    width: 247px;
+    height: 176px;
+    float: left;
+    list-style-type: none;
+}
+.c4t1{
+    margin-left: 52px;
+    margin-top: 22.6px;
+}
+.c4t2{
+    margin-left: 18.6px;
+    margin-top: 22.6px;
+}
+.c4t3{
+    margin-top: 17px;
+    margin-left: 52px;
+}
+.c4t4{
+    margin-top: 17px;
+    margin-left: 18.6px;
+}
+.bg1{
+    width: 138px;
+    height: 84px;
+    position: absolute;
+    top: 550px;
+    left: 74px;
+    background-image: url(../标题BG\ \(1\).png),url(../笔.png.png);
+    background-size: contain,138px 84px;
+    background-repeat: no-repeat;
+}
+.bg3{
+    width: 110px;
+    height: 141px;
+    background-image: url(../标题BG\ \(3\).png),url(../话筒.png.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 910px;
+    left: 672px;
+    background-size: contain,100px 130px;
+}
+
+.bg5{
+    width: 200px;
+    height: 120px;
+    background: url(../羽毛.png.png);
+    background-color: rgba(168, 3, 45, 1);
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 1635px;
+    left: 82px;
+    background-size: 100% 100%;
+    background-position: center;
+}
+.bg5 img{
+    width: 280px;
+    height: 150px;
+}
+.about{
+    background-image: url(../关于我们.png);
+    width: 1200px;
+    height: 250px;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    margin-top: 30px;
+    color: rgba(255, 255, 255, 1);
+    letter-spacing: 4.8px;
+    font-size: 50px;
+    line-height: 60px;
+    text-align: center;            
+}
+.aboutcontent{
+    width: 926px;
+    height: 1950px;
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    margin: 0 auto;
+    margin-top: 40px;
+    position: relative;
+}
+.aboutc1c{
+    background-image: url(../矩形\ 1.png);
+    width: 552px;
+    height: 187px;
+    position: absolute;
+    top: 50px;
+    left: 0px;
+}
+.about01{
+    width: 570px;
+    height: 180px;
+    text-shadow:inset 0px 2px 5px rgba(0, 0, 0, .5);
+    mix-blend-mode: normal;
+    color: rgba(255, 255, 255, 1);
+    letter-spacing: 4.62px;
+    font-size: 27px;
+    background: url(../舆情.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    left: 450px;
+    top: 50px;
+}
+.aboutc1c p{
+    width: 493px;
+    height: 107px;
+    color: rgba(112, 112, 112, 1);
+    font-size: 20px;
+    line-height: 27px;
+    display: block;
+    margin-top: 35px;
+    margin-left: 35px;
+    text-align: left;
+}
+.aboutc1a{
+    width: 426.6px;
+    height: 187px;
+    background-image: url(../矩形\ 1\ \(1\).png);
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 552px;
+    top: 50px;
+}
+
+.aboutc2a{
+    width: 426.6px;
+    height: 187px;
+    background-image: url(../矩形\ 1\ \(1\).png);
+    position: absolute;
+    left: -45px;
+    top: 296px;
+}
+.about02{
+    width: 570px;
+    height: 180px;
+    text-shadow:inset 0px 2px 5px rgba(0, 0, 0, .5);
+    mix-blend-mode: normal;
+    color: rgba(255, 255, 255, 1);
+    letter-spacing: 4.62px;
+    font-size: 27px;
+    background: url(../舆情\ \(1\).png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    left: -170px;
+    top: 300px;
+}
+.aboutc2c{
+    width: 926px;
+    height: 900px;
+    background-image: url(../矩形\ 1\ \(2\).png);
+    background-image: url(../图层\ 2.png.png);
+    background-size: contain,contain;
+    position: absolute;
+    top: 530px;
+}
+.aboutc2c img{
+    margin-top: 50px;
+    margin-left: 5px;
+}
+.xianfeng{
+    width: 1100px;
+    height: 502px;
+    position: absolute;
+    left: -87px;
+    top: 1480px;            
+    background-color: rgba(168, 3, 45, 1);
+    background-image: url(../pieneer.png);
+    background-size: 100% 200%;
+    background-position: center;           
+    background-repeat: no-repeat;;
+}
+footer{
+    width: 100%;   
+    background: linear-gradient(180deg, rgba(196, 196, 196, 0) 0%, rgba(38, 38, 38, 1) 0%);
+    margin-top: 35px;
+    position: relative;
+}
+.foot{
+    width: 1200px;
+    height: 250px;
+    position: relative;
+}
+.footpassage{
+    position: absolute;
+    height: 134px;
+    width: 223px;
+    color: rgba(112, 112, 112, 1);
+    font-size: 15px;
+    left: 178px;
+    top: 55px;
+    line-height: 25px;
+    text-align: left;
+}
+.foott1{
+    background-image: url(../1644244456969.jpg.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 96px;
+    height: 96.6px;
+    position: absolute;
+    left: 445.3px;
+    top: 55px;
+}
+.foott2{
+    background-image: url(../先锋标志\ \(1\).png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 96px;
+    height: 96.6px;
+    position: absolute;
+    left: 606px;
+    top: 55px;
+}
+.foott3{
+    background-image: url(../1644244456976.jpg.png);
+    width: 96px;
+    height: 96.6px;
+    position: absolute;
+    left: 758px;
+    top: 55px;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.zixun{
+    position: absolute;
+    width: 100px;
+    height: 20px;
+    color: rgba(112, 112, 112, 1);
+    font-size: 15px;
+    left: 755px;
+    top: 25px;
+}
+.foott4{
+    background-image: url(../1644245071244.jpg.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 96px;
+    height: 96.6px;
+    position: absolute;
+    left: 914.6px;
+    top: 55px;
+}
+</style>
+<body>
+    <center>
+        <header>
+            <div class="head" id="lunbo">
+                <nav id="navbar">
+                    <ul id="menu">
+                        <li class="logo"><img src="先锋标志.png" height="35px" width="35px"/><h1>先锋校网</h1></li>
+                        <li><a href="#">首页</a></li>
+                        <li><a href="#jj">校网简介</a></li>
+                        <li><a href="#rz">先锋日志</a></li>
+                        <li><a href="#js">部门介绍</a></li>
+                        <li><a href="#cg">工作成果</a></li>
+                        <li><a href="#gy">关于我们</a></li>
+                        <li><a href="#lx">联系我们</a></li>                
+                    </ul>
+                    <input class='search' type="text" placeholder="  搜索">
+                </nav>
+                <script>
+                    var navbar = document.getElementById("navbar");
+                    var menu = document.getElementById("menu");
+    
+                    window.onscroll = function(){
+                        if(window.pageXOffset >= menu.offsetTop){
+                            navbar.classList.add("sticky");
+                        }
+                        else{
+                            navbar.classList.remove("sticky");
+                        }
+                    }
+                </script>
+                <div class="dazi"><img src="先锋字体.png" height="333px" width="285px"/></div>
+                <button id="prev" style="background: url(矩形\ 234.png) no-repeat;"><img src="路径 46.png"/></button> 
+                <button id="next" style="background: url(矩形\ 234.png) no-repeat;"><img src="路径 46 (1).png"/></button>
+                <p id="info"></p>
+                <div class="bottom-mengban"></div>
+            </div>
+        </header>
+        <section>
+            <div class="content" id="jj">
+                <div class="jianjie">
+                    <p>校网简介</p>
+                    <a href="#"><p>>></p></a>
+                </div>
+                <div class="jjcontent">
+                    <div class="passpage1">
+                        <h5>先锋校网</h5>
+                        <p>
+                            先锋校网工作室隶属于校党委宣传部，主要负责学校网页的更<br/>
+                            新制作和日常维护、官网大图的制作以及学校新闻舆情的监督<br/>
+                            引导。现设有四个部门:技术部、美工部、新闻舆情部、宣传策<br/>划部。
+                        </p>
+                        <a href="https://mp.weixin.qq.com/s/aemkhrxdITTPjzOjOAZGwQ" target="_blank"><img src="查看更多.png" height="50px" width="150px"/></a>
+                    </div>
+                    <div class="jjtu">
+                        <img src="mmexport1644240872004.jpg.png" height="200px" width="300px"/>
+                    </div>
+                </div>
+                <div class="rizhi" id="rz">
+                    <p>先锋日志</p>
+                    <a href="#">>></a>
+                </div>
+                <div class="rzcontent">
+                        <ul>
+                            <li class="tb1">
+                                <div class="tbtop">
+                                    <p>每周例会</p>
+                                </div>
+                                <hr/>
+                                <img src="分组 1.png" height="220px" width="9px"/>
+                                <div class="liebiao">                           
+                                        <a href="#">各部门工作汇报</a><br/>
+                                        <a href="#">各部门布置任务</a><br/>
+                                        <a href="#">值班情况</a><br/>
+                                        <a href="#">新成员发放工作牌</a>                                                      
+                                </div>
+                            </li>
+                            <li class="tb2">
+                                <div class="tbtop">
+                                    <p>舆情日报</p>
+                                </div>
+                                <hr/>
+                                <img src="分组 1.png" height="220px" width="9px"/>
+                                <div class="liebiao">
+                                    <a href="#">1月9日网络舆情信息日报</a><br/>
+                                    <a href="#">1月8日网络舆情信息日报</a><br/>
+                                    <a href="#">1月7日网络舆情信息日报</a><br/>
+                                    <a href="#">1月6日网络舆情信息日报</a><br/>
+                                    <a href="#">1月5日网络舆情信息日报</a><br/>
+                                    <a href="#">1月4日网络舆情信息日报</a><br/>
+                                    <a href="#">1月3日网络舆情信息日报</a>
+                                </div>
+                            </li>
+                            <li class="tb3">
+                                <div class="tbtop">
+                                    <p>校网活动</p>
+                                </div>
+                                <hr/>
+                                <img src="分组 1.png" height="220px" width="9px"/>
+                                <div class="liebiao">
+                                    <a href="#">破冰活动</a><br/>
+                                    <a href="#">先锋志愿者活动</a><br/>
+                                    <a href="#">年末聚餐</a>
+                                </div>
+                            </li>
+                        </ul>
+                </div>
+                <div class="introduce" id="js">
+                    <br/>
+                    部门介绍<br/>
+                    DEPARTMENT INTRODUCTION
+                </div>
+                <div class="introcontent">
+                    <ul>
+                        <li class="introt1">
+                            <p>技术部</p>
+                        </li>
+                        <li class="introt2">
+                            <p>美工部</p>
+                        </li>
+                        <li class="introt3">
+                            <p>宣策部</p>
+                        </li>
+                        <li class="introt4">
+                            <p>舆情部</p>
+                        </li>
+                        <li class="introb1">
+                            <p>主要负责学校各个网<br/>
+                               站的更新、维护和制<br/>
+                               作。要求对网站制作<br/>
+                               和编码有一定的兴趣<br/>
+                               （零基础可学），具<br/>
+                               备较强的责任感和上<br/>
+                               进心。
+                            </p>
+                        </li>
+                        <li class="introb2">
+                            <p>
+                               主要负责网站界面设<br/>
+                               计，网页大图更新和<br/>
+                               组织内部活动海报，<br/>
+                               传单等打印资料的设<br/>
+                               计。要求有一定的审<br/>
+                               美能力，对图片处理<br/>
+                               和设计有兴趣（零基<br/>
+                               础可学），态度乐观<br/>
+                               积极向上的有志青年。
+                            </p>
+                        </li>
+                        <li class="introb3">
+                            <p>
+                               主要负责周报的整理<br/>
+                               ，贴吧的引导和微博<br/>
+                               的发布，要求工作热<br/>
+                               情有责任心，具有一<br/>
+                               定的文笔和信息敏感<br/>
+                               度。
+                            </p>
+                        </li>
+                        <li class="introb4">
+                            <p>
+                               主要负责站内活动的<br/>
+                               策划、宣传、组织等<br/>
+                               工作，维系成员感情<br/>
+                               。要求具有一定的文<br/>
+                               字功底和策划能力，<br/>
+                               善于思考和创新，具<br/>
+                               有较强沟通能力和团<br/>
+                               队合作意识。
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="fruit" id="cg">
+                    <br/>
+                        工作成果<br/>
+                        WORKING ACHIEVEMENT
+                </div>
+                <div class="fruitcontent">
+                    <div class="fym1">
+                        <p>网页制作--技术部</p>
+                        <a href="#">>></a>
+                    </div>
+                    <div class="fym1c">
+                        <img src="1644248614576.jpg.png" width="470px" height="306px"/>
+                    </div>
+                    <div class="fym1cright">
+    
+                    </div>
+                    <div class="shubiao">
+                        
+                    </div>
+                    <div class="tuceng4">
+    
+                    </div>
+                    <div class="tuceng41">
+    
+                    </div>
+                    <div class="fym2">
+                        <p>大图制作——美工部</p>
+                        <a href="#">>></a>
+                    </div>
+                    <div class="fym2c">
+                        <ul>
+                            <li class="c2t1"><img src="1644248614572.jpg.png" width="278px" height="114px"/></li>
+                            <li class="c2t2"><img src="1644248614547.jpg.png" width="278px" height="114px"/></li>
+                            <li class="c2t3"><img src="1644248614558.jpg.png" width="278px" height="114px"/></li>
+                            <li class="c2t4"><img src="1644248614566.jpg.png" width="278px" height="114px"/></li>
+                            <li class="c2t5"><img src="1644248614552.jpg.png" width="278px" height="114px"/></li>
+                            <li class="c2t6"><img src="1644248614562.jpg.png" width="278px" height="114px"/></li>                   
+                        </ul>
+                    </div>
+                    <div class="t3">
+    
+                    </div>
+                    <div class="t31">
+    
+                    </div>
+                    <div class="fym3">
+                        <p>舆情日报——舆情部</p>
+                        <a href="#">>></a>
+                    </div>
+                    <div class="fym3c">
+                        <img src="1644248614543.jpg.png" width="501px" height="288px"/>
+                    </div>
+                    <div class="fym4">
+                        <p>校网活动——宣策部</p>
+                        <a href="#">>></a>
+                    </div>
+                    <div class="fym4c">
+                        <ul>
+                            <li class="c4t1"><img src="1644248614522.jpg.png" width="247px" height="176px"/></li>
+                            <li class="c4t2"><img src="1644248614537.jpg.png" width="247px" height="176px"/></li>
+                            <li class="c4t3"><img src="1644248614533.jpg.png" width="247px" height="176px"/></li>
+                            <li class="c4t4"><img src="1644248614528.jpg.png" width="247px" height="176px"/></li>
+                        </ul>
+                    </div>
+                    <div class="bg1">
+    
+                    </div>
+                    <div class="bg3">
+                        
+                    </div>
+                    <div class="bg5">
+                        
+                    </div>
+                </div>
+                <div class="about" id="gy">
+                    <br/>
+                    关于我们<br/>
+                    ABOUT US
+                </div>
+                <div class="aboutcontent">
+                    <div class="aboutc1c">
+                        <p>
+                            每学期都会有免费的部门聚餐，生日时会有专属于你的生日惊喜，嗨皮真的不少!<br/>
+                            有属于自己的工作证和徽章，任期届满后还有聘书等你来拿，荣誉感爆棚!
+                        </p>
+                    </div>
+                    <div class="aboutc1a">
+                        
+                    </div>
+                    <div class="aboutc1atu">
+                        
+                    </div>
+                    <div class="about01">
+    
+                    </div>
+                    <div class="aboutc2a">
+    
+                    </div>
+                    <div class="aboutc2atu">
+                        
+                    </div>
+                    <div class="about02">
+    
+                    </div>
+                    <div class="aboutc2c">
+                        <img src="爱心.png" height="800px" width="900px"/>
+                    </div> 
+                    <div class="xianfeng">
+                        
+                    </div>          
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div class="foot">
+                <div class="footpassage" id="lx">
+                    联系我们<br/>
+                    地址: 湖州师范学院明达楼324<br/>
+                    官方微博: 湖州师范学院先锋网<br/>
+                    邮政编码: 313000
+                </div>
+                <div class="foott1"></div>
+                <div class="foott2"></div>
+                <div class="foott3"></div>
+                <div class="zixun">QQ咨询群</div>
+                <div class="foott4"></div>
+            </div>
+        </footer>
+    </center>           
+</body>
+</html>
